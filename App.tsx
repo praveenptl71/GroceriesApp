@@ -13,6 +13,7 @@
  import SplashScreen from 'react-native-splash-screen';
 import { NavigationContainer } from '@react-navigation/native';
 import { MainStackNavigator } from './src/navigation/StackNavigator';
+import { StatusBar } from 'react-native';
 
  export default class App extends Component {
   componentDidMount() {
@@ -22,6 +23,7 @@ import { MainStackNavigator } from './src/navigation/StackNavigator';
   render(){
     return (
       <NavigationContainer>
+        <StatusBar animated={true} backgroundColor='#FFFFFF' barStyle='dark-content' />
         <MainStackNavigator />
       </NavigationContainer>
     )

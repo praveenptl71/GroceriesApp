@@ -2,11 +2,11 @@ import React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
-import { Account } from "../screens/account";
-import { Favourite } from "../screens/favourites";
-import { Cart } from "../screens/cart";
-import { Explore } from "../screens/explore";
-import { Shop } from "../screens/shop";
+import { Account } from "../screens/Account";
+import { Favourite } from "../screens/Favourites";
+import { Cart } from "../screens/Cart";
+import { Explore } from "../screens/Explore";
+import { Shop } from "../screens/Shop";
 
 const Tab = createBottomTabNavigator();
 

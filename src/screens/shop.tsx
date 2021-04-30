@@ -6,18 +6,22 @@ import { InputLabel } from "../components/InputLabel";
 import { ICategory, IProduct } from "../interface";
 import { ProductCard } from "../components/ProductCard";
 import { CategoryCard } from "../components/CategoryCard";
+import { StackNavigationHelpers } from "@react-navigation/stack/lib/typescript/src/types";
+import { CarouselItems, Category, OfferProducts, SellingProducts } from "../data";
 
-export class Shop extends Component {
+export class Shop extends Component<{
+    navigation: StackNavigationHelpers
+}> {
 
     // constructor(props) {
     //     super(props);
     //     this.state = {
     //         activeIndex: 0,
-
+    // product-details
     //     }
     // }
 
-    _renderItem({ item }) {
+    _renderItem( {item} ) {
         return (
             <View style={{
                 borderRadius: 5,
@@ -38,30 +42,11 @@ export class Shop extends Component {
     }
 
     render() {
-        let carouselItems = [
-            { image: require("../assets/images/slider-banner.png") },
-            { image: require("../assets/images/slider-banner-1.png") },
-            { image: require("../assets/images/slider-banner-1.png") }
-        ]
-
-        const products:IProduct[] = [
-            { title:'Organic Bananas', price: '$4.99', image: require('../assets/images/product-banana.png'), quantity:'12pcs'},
-            { title:'Red Apple', price: '$4.99', image: require('../assets/images/product-apple.png'), quantity:'1kg'},
-            { title:'Organic Bananas', price: '$9.98', image: require('../assets/images/product-banana.png'), quantity:'24pcs'},
-            { title:'Red Apple', price: '$9.98', image: require('../assets/images/product-apple.png'), quantity:'2kg'}
-        ]
-
-        const selling:IProduct[] = [
-            { title:'Bell Pepper Red', price: '$4.99', image: require('../assets/images/product-bell-pepper.png'), quantity:'1kg, Priceg'},
-            { title:'Ginger', price: '$4.99', image: require('../assets/images/product-ginger.png'), quantity:'250gm, Priceg'},
-            { title:'Bell Pepper Red', price: '$9.98', image: require('../assets/images/product-bell-pepper.png'), quantity:'2kg, Priceg'},
-            { title:'Ginger', price: '$9.98', image: require('../assets/images/product-ginger.png'), quantity:'500gm, Priceg'},
-        ]
-
-        const category:ICategory[] = [
-            {title:'Pulses', image:require('../assets/images/category-pulses.png'), bgColor:'#fef2e6'},
-            {title:'Rice', image:require('../assets/images/category-rice.png'), bgColor:'#e7f4eb'}
-        ]
+        let carouselItems = CarouselItems;
+        const products:IProduct[] = OfferProducts;
+        const selling:IProduct[] = SellingProducts;
+        const category:ICategory[] = Category;
+        
         return (
             <SafeAreaView style={styles.container}>
                 <ScrollView style={styles.scrollView}>
@@ -104,7 +89,7 @@ export class Shop extends Component {
                                     {
                                         products.map((item, i)=>{
                                             return (
-                                                <ProductCard key={i} items={item} />
+                                                <ProductCard key={i} items={item} navigation={this.props.navigation} />
                                             )
                                         })
                                     }
@@ -122,7 +107,7 @@ export class Shop extends Component {
                                     {
                                         selling.map((item, i)=>{
                                             return (
-                                                <ProductCard key={i} items={item} />
+                                                <ProductCard key={i} items={item} navigation={this.props.navigation}/>
                                             )
                                         })
                                     }

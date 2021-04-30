@@ -1,13 +1,17 @@
 export interface IProduct{
+    readonly id:number,
     title: string,
     description?: string,
     price: string,
     quantity: string,
-    image: any
+    images?: any[],
+    thumbnail: any,
+    rating?: number
 }
 
 export interface ICategory{
     title: string,
     image: any,
-    bgColor: string
+    bgColor: string,
+    borderColor?: string,
 }

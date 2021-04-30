@@ -4,10 +4,12 @@ import { createStackNavigator } from "@react-navigation/stack";
 // import {Shop} from "../screens/shop";
 // import {Account} from "../screens/account";
 import { Welcome } from "../screens/welcome";
-import { SignUp } from "../screens/signup";
-import { Login } from "../screens/login";
-import { GetStarted } from "../screens/getStarted";
+import { SignUp } from "../screens/Signup";
+import { Login } from "../screens/Login";
+import { GetStarted } from "../screens/GetStarted";
 import BottomTabNavigator from './TabNavigator'
+import { ProductDetails } from "../screens/ProductDetails";
+import { ProductListing } from "../screens/ProductListing";
 
 const Stack = createStackNavigator();
 
@@ -27,6 +29,8 @@ const MainStackNavigator = () => {
       <Stack.Screen options={{headerShown:false}} name="signup" component={SignUp} />
       <Stack.Screen options={{headerShown:false}} name="login" component={Login} />
       <Stack.Screen options={{headerShown:false}} name="homeTab" component={BottomTabNavigator} />
+      <Stack.Screen options={{headerShown:false}} name="product-details" component={ProductDetails} />
+      <Stack.Screen options={{headerShown:false}} name="product-listing" component={ProductListing} />
     </Stack.Navigator>
   );
 }
