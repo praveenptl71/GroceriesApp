@@ -6,7 +6,7 @@ TypeScript
 
 # Screenshots
 <p align="center">
-<img src="https://raw.githubusercontent.com/praveenptl71/GroceriesApp/main/screenshots/Screenshot_20210430-130527.png?token=AJYBSX3QDNIGBOF4ASPSRFDARO2XO" alt="Your image title" width="200"/>&nbsp;
+<img src="https://raw.githubusercontent.com/praveenptl71/GroceriesApp/main/screenshots/Screenshot_20210430-130527.png?token=AJYBSX6RZXRYDKBFOCUZLE3ARO4W2" alt="Your image title" width="200"/>&nbsp;
 <img src="https://raw.githubusercontent.com/praveenptl71/GroceriesApp/main/screenshots/Screenshot_20210430-130600.png?token=AJYBSX5BSN2AKXQTWXEXCHLARO3Z6" alt="Your image title" width="200"/>&nbsp;
   <img src="https://raw.githubusercontent.com/praveenptl71/GroceriesApp/main/screenshots/Screenshot_20210430-130609.png?token=AJYBSX3HDWF4UNBRXHYXR73ARO32K" alt="Your image title" width="200"/>&nbsp;
 <img src="https://raw.githubusercontent.com/praveenptl71/GroceriesApp/main/screenshots/Screenshot_20210430-130622.png?token=AJYBSX6HVNUJVCKQMSZBS2LARO32Q" alt="Your image title" width="200"/>&nbsp;
